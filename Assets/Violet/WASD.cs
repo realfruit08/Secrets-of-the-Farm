@@ -8,6 +8,9 @@ public class Movement : MonoBehaviour
     public float HealthAtStart = 100f;
     private SpriteRenderer spriteRenderer;
     private Rigidbody2D rb;
+    public float speed = 4.0f;
+    public float run = 3.0f;
+    public float sneak = 0.5f;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,9 +21,6 @@ public class Movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float speed = 4.0f;
-        float run = 3.0f;
-        float sneak = 0.5f;
         if (Health <= 0)
         {
             Debug.Log("you are dead now");
