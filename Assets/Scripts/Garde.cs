@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Garde : MonoBehaviour
 {
@@ -23,8 +24,9 @@ public class Garde : MonoBehaviour
             Destroy(gameObject);
         }
     }
-    public void Watered()
+    public void Watered(Image img)
     {
+        img.color = Color.white;
         cropsWatered++;
     }
 }
