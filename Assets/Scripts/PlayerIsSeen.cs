@@ -61,7 +61,6 @@ public class PlayerIsSeen : MonoBehaviour
                 Vector2 player_direction = (new Vector2(player.transform.position.x, player.transform.position.y) 
                 - new Vector2(transform.position.x, transform.position.y)).normalized;
 
-                RaycastHit2D[] hit;
 
                 // Does the raycast
                 if (Physics2D.Raycast(new Vector2(transform.position.x, transform.position.y), 
