@@ -49,5 +49,8 @@ TagManager:
   - name: Violet
     uniqueID: 3501162455
     locked: 0
+  - name: HUD
+    uniqueID: 2519860661
+    locked: 0
   m_RenderingLayers:
   - Default
