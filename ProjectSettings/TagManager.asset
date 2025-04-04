@@ -43,6 +43,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: NPCS
+    uniqueID: 2892255617
+    locked: 0
   - name: Violet
     uniqueID: 3501162455
     locked: 0
