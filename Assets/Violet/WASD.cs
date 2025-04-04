@@ -25,32 +25,35 @@ public class Movement : MonoBehaviour
         {
             Debug.Log("you are dead now");
             SceneManager.LoadScene("Scenes/Secrets of the Farm");
+            return;
         }
+        float speedUpdate = speed;
         if (Input.GetKey(KeyCode.LeftControl))
         {
-            speed = 4.0f * sneak;
+            speedUpdate = speed * sneak;
+        }
+         if (Input.GetKey(KeyCode.LeftShift))
+        {
+            speedUpdate = speed * run;
         }
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (Input.GetKey(KeyCode.W))
         {
-            transform.position += Vector3.up * speed * Time.deltaTime;
+            transform.position += Vector3.up * speedUpdate * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.position += Vector3.left * speed * Time.deltaTime;
+            transform.position += Vector3.left * speedUpdate * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.S))
         {
-            transform.position += Vector3.down * speed * Time.deltaTime;
+            transform.position += Vector3.down * speedUpdate * Time.deltaTime;
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.position += Vector3.right * speed * Time.deltaTime;
+            transform.position += Vector3.right * speedUpdate * Time.deltaTime;
         }
-        if (Input.GetKey(KeyCode.LeftShift))
-        {
-            speed = 3.0f * run;
-        }
+       
         if (Input.GetKey(KeyCode.D))
             spriteRenderer.flipX = false;
         else if (Input.GetKey(KeyCode.A))
