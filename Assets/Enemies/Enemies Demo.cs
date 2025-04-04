@@ -25,4 +25,14 @@ public class EnemiesDemo : MonoBehaviour
 
 
     }
+
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.layer == 6) {
+
+            // returns violet back to the inside of the barn
+            violet.transform.position = new Vector3(-95.95564f, 74.97383f, -3.0f);
+        }
+    }
 }
