@@ -30,13 +30,17 @@ public class walk_randomly : MonoBehaviour
     void Update()
     {
         // Checks if it's ok for the AI to wander about
-        if (playerIsSeen == false) {
+        if (playerIsSeen.playerIsSeen == false) {
+
+            Debug.Log("Not Seeing Player");
 
             
 
             // Moves the npc
             transform.position += new Vector3(Mathf.Cos(direction),
-            Mathf.Sin(direction)) * Time.deltaTime;
+            Mathf.Sin(direction)) 
+            * Time.deltaTime
+            * speed;
 
             //Counts a frame
             turn_frame_counter++;
